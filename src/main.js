@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 import * as W from './world.js';
 import * as P from './player.js';
 import * as U from './ui.js';

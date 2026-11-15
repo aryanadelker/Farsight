@@ -1,6 +1,6 @@
-# Farsight (first-person, Three.js + cannon-es)
+> SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md.
 
-Link: https://farsight-xhl0.onrender.com/
+# Farsight (first-person, Three.js + cannon-es)
 
 ## Run it
 - Open a terminal in this folder and run `npx serve .` (or `python3 -m http.server 8000`), then open the link.
@@ -50,3 +50,6 @@ Link: https://farsight-xhl0.onrender.com/
 - When action points reach 0, the counter turns red with a reminder to go and sleep.
 - Title screen > Sources (and H in the game): how each meter is worked out, the real data with links, how the base follows the ISS, and what is made up. Built from the data file in `src/sourcesInfo.js`, so it stays in step with the numbers.
 - The antenna is repaired twice: the first repair uses a 4-gear coarse layout, the second a different 5-gear fine-alignment layout.
+
+## SI disclosure
+This prototype is SI generated (made with Claude, an AI assistant, for the Farsight team). Videos and the title art have a visible "SI GENERATED" watermark and an SI note in their metadata; every code and data file begins with an SI notice; `index.html` has `generator` and `si-disclosure` meta tags. Full list: `SI_DISCLOSURE.md` and `si-disclosure.json`.

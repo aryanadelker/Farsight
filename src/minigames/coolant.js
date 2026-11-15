@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // MINIGAME 6: Coolant Circulation.
 // Open/close valves and turn the three-way diverters so coolant runs ONE loop: pump -> every heat exchanger -> radiator -> pump.
 // Open bypasses split the flow, an open drain leaks, a wrong diverter dead-ends the flow. Temperatures only fall on a good loop.

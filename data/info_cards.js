@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. Values marked as sourced come from the cited documents; the file itself is SI generated. */
 // Information cards shown when the player clicks a machine.
 // what = what it does in the game (simple words). real = the real-world link. refs = REAL_DATA keys whose sources are linked.
 // Every number below is either from REAL_DATA (sourced) or simple physics (light travel time). ISS data is marked as ISS data.

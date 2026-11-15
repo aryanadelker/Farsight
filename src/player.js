@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 import * as THREE from 'three';
 import * as CANNON from 'cannon-es';
 import {camera,phys,dyn,hits,solids,removeObj} from './world.js';

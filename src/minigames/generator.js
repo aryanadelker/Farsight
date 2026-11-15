@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // MINIGAME 2: Emergency Generator Startup (also Battery Bank Recharge).
 // A real checklist with timing: master, both reactant valves, heat the stack into its band, crank, then close the bus tie in sync.
 import { h, s, C, clamp, bandBar } from './kit.js';

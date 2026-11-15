@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // Registers every minigame with the manager.
 import { register } from './manager.js';
 import * as power from './power.js';

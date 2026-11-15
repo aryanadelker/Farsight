@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // Convex collision shapes that follow curved visible geometry (hull roofs, hub dome, dish reflector).
 // Faces are oriented automatically (outward), so callers only list points.
 import * as CANNON from 'cannon-es';

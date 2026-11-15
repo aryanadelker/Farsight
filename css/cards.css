@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 /* Information cards (click a machine) */
 #icard{position:fixed;inset:0;z-index:45;display:none;align-items:center;justify-content:center;background:rgba(2,5,10,.45);font:500 15px/1.45 system-ui,"Segoe UI",Roboto,sans-serif}
 .ic-box{width:min(740px,94vw);border:2px solid #e8eef5;border-radius:4px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.6);animation:mgIn .16s ease-out}

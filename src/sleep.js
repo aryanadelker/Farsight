@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // Ending the day = sleeping in a Crew Quarters sleep station. A short fade shows the new day starting.
 import { S, endDay, bus } from './state.js';
 import * as P from './player.js';

@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. Values marked as sourced come from the cited documents; the file itself is SI generated. */
 // Maintenance minigames: which puzzle repairs which system, where it is played, and what must work first.
 // Every number here is an invented game-design value (not NASA data).
 // needs: 'generator' = emergency generator started; any other name = that system must be Working.

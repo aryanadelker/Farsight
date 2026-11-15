@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // Selene Base: a hub-and-spoke station inspired by the ISS (node + lab + habitation + greenhouse + airlock + cupola).
 // Layout and sizes are INVENTED design values. Module names map to ISS analogues in docs/ASSETS.md.
 import * as THREE from 'three';

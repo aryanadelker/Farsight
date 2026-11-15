@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. Values marked as sourced come from the cited documents; the file itself is SI generated. */
 // All numbers live here. REAL_DATA = sourced. GAME = invented balance values (not NASA).
 const NTRS='https://ntrs.nasa.gov/api/citations/20100036823/downloads/20100036823.pdf';
 export const REAL_DATA={

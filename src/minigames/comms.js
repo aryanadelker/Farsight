@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // MINIGAME 8: Communications Restoration (final task).
 // One chain: lock the carrier -> sync the waveform -> build link strength (orbital station handshake) -> rebuild lost packets from Earth.
 import { h, s, C, clamp, shuffle } from './kit.js';

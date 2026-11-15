@@ -1,3 +1,4 @@
+# SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md.
 from cine import *
 
 # ================= INTRO =================
@@ -129,7 +130,7 @@ CREDITS = [('FARSIGHT', 'title'), ('A lunar survival game about space training',
   ('GAME DESIGN · PROGRAMMING · STORY', 'role'), ('Aryan Adelker · Chelsea Vaz · Christopher D\'souza', 'name'), ('', 'gap'),
   ('CREW OF SELENE BASE', 'role'), ('Commander Reyes', 'name'), ('Engineer Okafor', 'name'), ('Botanist Lindqvist', 'name'), ('Communications Officer Nair', 'name'), ('', 'gap'),
   ('BUILT WITH', 'role'), ('three.js (MIT License)', 'name'), ('cannon-es physics (MIT License)', 'name'), ('', 'gap'),
-  ('DEVELOPMENT ASSISTANCE', 'role'), ('Claude, an AI assistant', 'name'), ('', 'gap'),
+  ('SI GENERATION', 'role'), ('Code, art, videos and text were SI generated', 'name'), ('with Claude, an AI assistant', 'name'), ('', 'gap'),
   ('SPECIAL THANKS', 'role'), ('Everyone who tested the base', 'name'), ('', 'gap'),
   ('Inspired by real spaceflight training.', 'note'), ('Not affiliated with or endorsed by any space agency.', 'note'), ('All characters, places and mission data are fictional.', 'note')]
 def credits(t, dur=34):
@@ -187,7 +188,9 @@ if __name__ == '__main__':
         for n, d_, fn in OUTRO: render(n, d_, fn)
         concat('farsight_ending', [n for n, _, _ in OUTRO])
     elif what == 'titlebg':   # menu background without any text (the menu itself is HTML)
-        landscape(0, cam=.3, push=1.0, base_kw=dict(lights=1), earth_xy=(980, 160)).save('/home/claude/cine/title_bg.jpg', quality=86)
+        im = watermark(landscape(0, cam=.3, push=1.0, base_kw=dict(lights=1), earth_xy=(980, 160)))
+        ex = Image.Exif(); ex[0x010E] = SI_NOTE; ex[0x0131] = 'SI generated (Claude, an AI assistant)'   # ImageDescription, Software
+        im.save('/home/claude/cine/title_bg.jpg', quality=86, exif=ex, comment=SI_NOTE.encode())
     elif what == 'i5':
         render('i5', 7, i5); concat('farsight_intro', [n for n, _, _ in INTRO])
     elif what == 'credits':

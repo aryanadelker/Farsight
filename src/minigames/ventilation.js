@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // MINIGAME 3: Ventilation Repair.
 // Rotate duct sections (straight, elbow, junction) to carry air from the fan to both grow-bay vents.
 // Blocked ducts must be held to clear. Open duct ends leak air.

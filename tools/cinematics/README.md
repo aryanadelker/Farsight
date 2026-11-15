@@ -1,6 +1,8 @@
+> SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md.
+
 # Cinematics source
 
-The intro, ending and credits videos and the title background are drawn by these Python scripts (Pillow + NumPy + ffmpeg). No outside images or logos are used.
+The intro, ending and credits videos and the title background are drawn by these Python scripts (Pillow + NumPy + ffmpeg). The scripts are SI generated (written with Claude, an AI assistant). Every frame gets a visible "SI GENERATED" watermark and every file gets an SI note in its metadata. No outside images or logos are used.
 
 - `python3 scenes.py intro` / `outro` / `credits`: renders the videos (into `/home/claude/cine` paths set at the top of `cine.py`; change `OUT` to suit your machine).
 - `python3 scenes.py titlebg`: renders the title screen background.

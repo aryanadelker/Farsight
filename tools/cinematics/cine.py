@@ -1,3 +1,4 @@
+# SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md.
 # Farsight cinematics: intro, outro, credits, title screen. Everything is drawn here (no logos, no outside images).
 import math, random, subprocess, os, sys
 import numpy as np
@@ -235,12 +236,21 @@ def panel(t, mode):   # mode 'lost' or 'lock' (lock progress in t within scene)
         if random.random() < .12: img = ImageChops.offset(img, random.randint(-12, 12), 0)
     return img
 
+# ---------- SI disclosure: visible watermark + file metadata ----------
+SI_NOTE = 'SI generated with Claude (an AI assistant) for the Farsight team'
+WM = (lambda: (lambda im: (im, ImageDraw.Draw(im)))(Image.new('RGBA', (W, H), (0, 0, 0, 0))))()
+_d = WM[1]; _f = font(16, 'Bold'); _t = 'SI GENERATED'; _tw = _d.textlength(_t, font=_f)
+_d.rounded_rectangle([W - _tw - 40, 14, W - 14, 44], 6, fill=(0, 0, 0, 120), outline=(255, 255, 255, 90)); _d.text((W - _tw - 27, 20), _t, font=_f, fill=(255, 255, 255, 205))
+WM = WM[0]
+def watermark(img): return Image.alpha_composite(img.convert('RGBA'), WM).convert('RGB')
+META = ['-metadata', 'comment=' + SI_NOTE, '-metadata', 'description=' + SI_NOTE, '-metadata', 'artist=Farsight team (SI generated)']
+
 # ---------- encoding ----------
 def render(name, dur, frame_fn):
     tmp = f'{OUT}/{name}.part.mp4'
-    p = subprocess.Popen(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-', '-c:v', 'libx264', '-crf', '20', '-preset', 'veryfast', '-pix_fmt', 'yuv420p', '-f', 'mp4', tmp], stdin=subprocess.PIPE)
+    p = subprocess.Popen(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-', '-c:v', 'libx264', '-crf', '20', '-preset', 'veryfast', '-pix_fmt', 'yuv420p', *META, '-f', 'mp4', tmp], stdin=subprocess.PIPE)
     n = int(dur * FPS)
-    for i in range(n): p.stdin.write(frame_fn(i / FPS).tobytes())
+    for i in range(n): p.stdin.write(watermark(frame_fn(i / FPS)).tobytes())   # every frame carries the SI watermark
     p.stdin.close(); p.wait()
     if p.returncode == 0: os.replace(tmp, f'{OUT}/{name}.mp4')
     else: raise SystemExit('ffmpeg failed ' + name)
@@ -248,4 +258,4 @@ def render(name, dur, frame_fn):
 def concat(name, parts):
     lst = f'{OUT}/{name}.txt'; open(lst, 'w').write(''.join(f"file '{OUT}/{p}.mp4'\n" for p in parts))
     tmp = f'{OUT}/{name}.part.mp4'
-    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lst, '-c', 'copy', tmp], check=True); os.replace(tmp, f'/home/claude/cine/{name}.mp4')
+    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lst, '-c', 'copy', *META, tmp], check=True); os.replace(tmp, f'/home/claude/cine/{name}.mp4')

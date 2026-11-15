@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // MINIGAME 4: Oxygen Scrubber Calibration (also Radiation Shield Field Balance).
 // Three coupled controls drive three readings. Every reading must sit in its green band at the same time, and hold.
 import { h, s, C, clamp } from './kit.js';
