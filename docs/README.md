@@ -1,5 +1,7 @@
 # Farsight (first-person, Three.js + cannon-es)
 
+Link: https://farsight-xhl0.onrender.com/
+
 ## Run it
 - Open a terminal in this folder and run `npx serve .` (or `python3 -m http.server 8000`), then open the link.
 - ES modules need a web server. Do not double-click `index.html`.
