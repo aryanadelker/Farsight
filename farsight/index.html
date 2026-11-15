@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Farsight</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--bg:#0b1020;--ink:#eef2ff;--ok:#4ade80;--warn:#fbbf24;--bad:#f87171;--pan:#101a33cc}
+*{box-sizing:border-box}body{margin:0;overflow:hidden;background:var(--bg);color:var(--ink);font:600 16px/1.3 "Trebuchet MS",system-ui,sans-serif}
+canvas{display:block}
+#top{position:fixed;top:10px;left:10px;background:var(--pan);padding:8px 14px;border-radius:10px}
+#meters{position:fixed;top:56px;left:10px;width:230px;background:var(--pan);padding:8px 12px;border-radius:10px}
+.m{margin:6px 0}.m i{display:block;height:12px;background:#223;border-radius:6px;overflow:hidden}
+.m b{display:block;height:100%;background:var(--ok)}.m b.lo{background:var(--bad)}
+#obj{position:fixed;top:10px;right:10px;width:270px;background:var(--pan);padding:8px 12px;border-radius:10px;font-size:14px}
+#obj h4{margin:0 0 6px}.lk{opacity:.5}.ok{color:var(--ok)}
+#cross{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.7;pointer-events:none}
+#prompt{position:fixed;left:50%;top:56%;transform:translateX(-50%);background:var(--pan);padding:6px 14px;border-radius:8px;display:none}
+#msg{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--pan);padding:8px 16px;border-radius:8px;display:none}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);width:min(620px,92vw);background:#1b2547ee;padding:10px 16px;border-radius:10px;display:none;font-size:15px}
+#toast a,#sources a{color:#93c5fd}
+#spe{position:fixed;inset:0;background:#ff1a1a33;pointer-events:none;display:none}
+#sources{position:fixed;inset:8% 12%;background:#0b1020f2;padding:18px;border-radius:12px;overflow:auto;display:none;font-size:14px}
+#overlay{position:fixed;inset:0;background:#05080fee;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
+#overlay>div{max-width:560px}#overlay h1{margin:0 0 8px;font-size:44px}
+button{font:inherit;padding:12px 26px;border:0;border-radius:10px;background:var(--ok);color:#052;cursor:pointer;margin-top:14px}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","cannon-es":"https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js"}}</script>
+</head><body>
+<div id="top"></div><div id="meters"></div><div id="obj"></div><div id="cross">+</div>
+<div id="prompt"></div><div id="msg"></div><div id="toast"></div><div id="spe"></div><div id="sources"></div><div id="overlay"></div>
+<script type="module" src="src/main.js"></script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Farsight</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,">
+<style>
+:root{--bg:#0b1020;--ink:#eef2ff;--ok:#4ade80;--warn:#fbbf24;--bad:#f87171;--pan:#101a33cc}
+*{box-sizing:border-box}body{margin:0;overflow:hidden;background:var(--bg);color:var(--ink);font:600 16px/1.3 "Trebuchet MS",system-ui,sans-serif}
+canvas{display:block}
+#top{position:fixed;top:10px;left:10px;background:var(--pan);padding:8px 14px;border-radius:10px}
+#meters{position:fixed;top:56px;left:10px;width:230px;background:var(--pan);padding:8px 12px;border-radius:10px}
+.m{margin:6px 0}.m i{display:block;height:12px;background:#223;border-radius:6px;overflow:hidden}
+.m b{display:block;height:100%;background:var(--ok)}.m b.lo{background:var(--bad)}
+#obj{position:fixed;top:10px;right:10px;width:270px;background:var(--pan);padding:8px 12px;border-radius:10px;font-size:14px}
+#obj h4{margin:0 0 6px}.lk{opacity:.5}.ok{color:var(--ok)}
+#cross{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.7;pointer-events:none}
+#prompt{position:fixed;left:50%;top:56%;transform:translateX(-50%);background:var(--pan);padding:6px 14px;border-radius:8px;display:none}
+#msg{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--pan);padding:8px 16px;border-radius:8px;display:none}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);width:min(620px,92vw);background:#1b2547ee;padding:10px 16px;border-radius:10px;display:none;font-size:15px}
+#toast a,#sources a{color:#93c5fd}
+#where{position:fixed;top:10px;left:50%;transform:translateX(-50%);background:var(--pan);padding:6px 16px;border-radius:10px;font-size:15px;letter-spacing:.04em;pointer-events:none}
+#map{position:fixed;right:10px;bottom:10px;width:190px;height:190px;background:#0a1226cc;border-radius:12px;display:block}
+#visor{position:fixed;inset:0;pointer-events:none;display:none;background:radial-gradient(ellipse at 50% 46%,rgba(0,0,0,0) 56%,rgba(6,10,20,.55) 78%,rgba(2,4,8,.94) 100%);box-shadow:inset 0 0 90px 30px rgba(0,0,0,.55)}
+#visor i{position:absolute;left:50%;bottom:4%;transform:translateX(-50%);font:600 13px/1 monospace;color:#9fd8ff;letter-spacing:.12em;background:#06101acc;padding:5px 12px;border-radius:8px;font-style:normal}
+#spe{position:fixed;inset:0;background:#ff1a1a33;pointer-events:none;display:none}
+#sources{position:fixed;inset:8% 12%;background:#0b1020f2;padding:18px;border-radius:12px;overflow:auto;display:none;font-size:14px}
+#overlay{position:fixed;inset:0;background:#05080fee;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
+#overlay>div{max-width:560px}#overlay h1{margin:0 0 8px;font-size:44px}
+button{font:inherit;padding:12px 26px;border:0;border-radius:10px;background:var(--ok);color:#052;cursor:pointer;margin-top:14px}
+</style>
+<link rel="stylesheet" href="css/minigames.css">
+<link rel="stylesheet" href="css/screens.css">
+<link rel="stylesheet" href="css/cards.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","cannon-es":"./vendor/cannon-es.js"}}</script>
+</head><body>
+<div id="top"></div><div id="meters"></div><div id="obj"></div><div id="cross">+</div>
+<div id="where"></div><canvas id="map" width="380" height="380"></canvas><div id="visor"><i>EVA · SUIT ON · NO AIR OUTSIDE</i></div><div id="prompt"></div><div id="msg"></div><div id="toast"></div><div id="spe"></div><div id="sources"></div><div id="overlay"></div>
+<div id="title"><h1>FARSIGHT</h1><div class="ts-sub">A LUNAR SURVIVAL MISSION</div>
+ <div class="ts-menu"><button data-act="start" type="button">Start mission</button><button data-act="how" type="button">How to play</button><button data-act="settings" type="button">Settings</button><button data-act="sources" type="button">Sources</button><button data-act="credits" type="button">Credits</button></div>
+ <div class="ts-panel"></div><div class="ts-foot">Mouse or arrow keys + Enter</div><div class="ts-ver">v1.0</div></div>
+<div id="icard"><div class="ic-box"><div class="ic-head"><span class="ic-code"></span><button class="ic-x" type="button" title="Close (Esc)">✕</button></div><div class="ic-body"><div class="ic-text"></div><div class="ic-img"><canvas width="360" height="440"></canvas></div></div></div></div>
+<div id="sleepfx"></div>
+<div id="cine"><video id="cine-v" playsinline muted preload="auto"></video><button id="cine-skip" type="button">Skip ▸</button><div id="cine-hint">Esc / Space to skip</div></div>
+<script type="module" src="src/main.js"></script></body></html>
