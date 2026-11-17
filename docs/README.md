@@ -53,7 +53,10 @@
 
 ## SI disclosure
 This prototype is SI generated (made with Claude, an AI assistant, for the Farsight team). Videos and the title art have a visible "SI GENERATED" watermark and an SI note in their metadata; every code and data file begins with an SI notice; `index.html` has `generator` and `si-disclosure` meta tags. Full list: `SI_DISCLOSURE.md` and `si-disclosure.json`.
+<<<<<<< HEAD
 
 ## Movement and the first-task guide
 - Inside the base the player walks at 5 m/s and runs (Shift) at 8 m/s. Outside, in the spacesuit, it stays 3.5 / 6 m/s.
 - At the start a guide leads to the first task, the power bus: start the emergency generator (Battery Bank rack), inspect the Power Distribution rack, then repair it. A gold marker floats over the right machine and an arrow at the top of the screen shows the way (through the hub doorways) and the distance. It disappears once the power bus is fixed. Code: `src/guide.js`.
+=======
+>>>>>>> 445e0dfdf11e5370fc223b99f3bdfb2e30fe9922
