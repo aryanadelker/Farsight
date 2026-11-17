@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 import {GAME,REAL_DATA as R,SYSTEMS,EVENTS,OBJECTIVES,PHASES} from '../data/outpost_data.js';
 export const bus={say(){},event(){},over(){},crate(){}};
 const MULT=[1,.5,0],NAMES=['Working','Degraded','Failed'],VITAL=['power','oxygen','water'];

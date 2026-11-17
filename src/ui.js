@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 import {S} from './state.js';
 import {rooms,consoles,dyn,beds} from './world.js';
 import {sourcesHTML} from './sourcesInfo.js';

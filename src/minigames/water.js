@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // MINIGAME 5: Water Filtration.
 // Place filter modules in the right order (each card says what it removes and what it needs), then run the pump.
 // The water changes colour stage by stage; a stage that gets the wrong water fouls and stops the run.

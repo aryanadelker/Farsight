@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // MINIGAME 7: Satellite Dish Repair.
 // A hand-driven gear train. Every drive step turns each ENGAGED gear one tooth; a gear only turns if its whole chain back
 // to the drive wheel is engaged. Use the clutches to bring each mark to its notch, then lock (engage) every clutch.

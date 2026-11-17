@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 import * as W from './world.js';
 import * as P from './player.js';
 import * as U from './ui.js';
@@ -7,6 +8,7 @@ import * as T from './tasks.js';
 import * as SC from './screens.js';
 import * as CARD from './cards.js';
 import * as SL from './sleep.js';
+import * as GUIDE from './guide.js';
 bus.say=U.say;bus.event=U.event;
 // winning plays the ending + credits first (after the comms panel is closed); losing shows the results straight away
 let pendingEnd=false;bus.over=()=>{if(!S.over.win)return U.over();if(MG.isOpen())pendingEnd=true;else SC.ending(U.over);};
@@ -35,4 +37,6 @@ CARD.configure({open(){P.setBusy(true);U.prompt('');if(document.pointerLockEleme
 let last=performance.now();
 (function loop(t){requestAnimationFrame(loop);const dt=Math.min((t-last)/1000,.05);last=t;
  if(SC.active())return;   // menus and videos cover the view: skip the 3D work
- P.update();W.update(dt);U.render();U.prompt(document.pointerLockElement&&!MG.isOpen()&&!SL.active()?P.hoverText():'');})(last);
+ P.update();W.update(dt);U.render();
+ GUIDE.update(dt,document.getElementById('overlay').style.display==='none');   /* first-task guide, once the briefing is closed */
+ U.prompt(document.pointerLockElement&&!MG.isOpen()&&!SL.active()?P.hoverText():'');})(last);

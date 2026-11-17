@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // Small shared helpers for the minigame interfaces.
 export const SVGNS = 'http://www.w3.org/2000/svg';
 export const C = { line: '#23415c', dim: '#2b3e53', idle: '#566a80', live: '#5ec8ff', ok: '#5ef0a0', warn: '#ffc857', bad: '#ff6b6b', text: '#dfe8f2', sub: '#7f97ad', fill: '#0d1824', fill2: '#112131' };

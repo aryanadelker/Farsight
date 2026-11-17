@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // Click a machine -> a simple information card (title bar, text on the left, a picture of the machine on the right).
 // The picture is a snapshot taken by the game's own camera, so no outside images are needed.
 import * as THREE from 'three';

@@ -1,3 +1,5 @@
+> SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md.
+
 # Repair minigames
 
 All numbers and readings in the puzzles are invented game values, not NASA data.

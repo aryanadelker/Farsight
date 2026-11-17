@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // Task progression: decides what pressing E on a piece of equipment does.
 // Inspect (1 action) -> repair = play the minigame -> on success the normal repair in state.js runs (actions + part spent).
 // Dependencies live in data/tasks_data.js (needs) and data/outpost_data.js (locks and objectives); nothing is hard-coded per game.

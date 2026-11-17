@@ -1,6 +1,7 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 import * as THREE from 'three';
 import * as CANNON from 'cannon-es';
-import {camera,phys,dyn,hits,solids,removeObj} from './world.js';
+import {camera,phys,dyn,hits,solids,removeObj,rooms} from './world.js';
 import {terrainH} from './env.js';
 import {S,bus,toggle} from './state.js';
 import * as T from './tasks.js';
@@ -43,12 +44,14 @@ export function hoverText(){
 }
 export const pos=()=>body.position;
 export const heading=()=>yaw;
+// inside = in a room, or within 1.5 m of one (covers the short tunnels between rooms)
+export const indoors=()=>{const p=body.position;return rooms.some(r=>p.x>r.x0-1.5&&p.x<r.x1+1.5&&p.z>r.z0-1.5&&p.z<r.z1+1.5);};
 export function teleport(x,z,y=0,p=0,l=0){lift=l;body.position.set(x,R+.05,z);body.velocity.set(0,0,0);yaw=y;pitch=p;}
 // standing on something = a contact under the feet sphere pushing up
 function onGround(){for(const c of phys.contacts){const me=c.bi===body?1:c.bj===body?-1:0;if(!me)continue;const sh=me>0?c.si:c.sj;if(sh!==body.shapes[0])continue;if(-c.ni.y*me>.5&&body.velocity.y<.3)return true;}return false;}
 let busy=false;export const setBusy=b=>{busy=b;for(const k in K)K[k]=0;grab=null;};   // minigame open: no walking, jumping or grabbing
 export function update(){
- const f=busy?0:(K.KeyW?1:0)-(K.KeyS?1:0),s=busy?0:(K.KeyD?1:0)-(K.KeyA?1:0),sp=K.ShiftLeft?6:3.5;
+ const f=busy?0:(K.KeyW?1:0)-(K.KeyS?1:0),s=busy?0:(K.KeyD?1:0)-(K.KeyA?1:0),sp=indoors()?(K.ShiftLeft?8:5):(K.ShiftLeft?6:3.5);   // faster inside the base; outside the suit slows you down
  const dx=-Math.sin(yaw)*f+Math.cos(yaw)*s,dz=-Math.cos(yaw)*f-Math.sin(yaw)*s,n=Math.hypot(dx,dz)||1;
  body.velocity.x=dx/n*sp;body.velocity.z=dz/n*sp;
  const p=body.position,g=terrainH(p.x,p.z)+R;                 // follow the moon ground outside the flat build site

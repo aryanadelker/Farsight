@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // Minigame manager: one shared panel, one active task at a time.
 // A game module exports { mount(body, api, task) } and returns { destroy?(), test? }.
 // The manager owns every timer and frame callback a game registers, so closing always cleans up.

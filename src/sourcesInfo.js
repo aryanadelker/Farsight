@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // The "Sources" page (title screen) and the in-game H panel: how the meters are worked out, the real data used,
 // how the base follows the ISS, and what is made up. Numbers are read from the data file, so this page never goes out of date.
 import { GAME, REAL_DATA as R, SYSTEMS } from '../data/outpost_data.js';
@@ -33,6 +34,8 @@ export function sourcesHTML() {
 <h3>What is made up</h3>
 <p>The story, characters, events, puzzle readings and all "game balance" numbers (the multipliers above, power use, radiation speed-up, repair costs) are invented to make the game playable. Values marked "ISS data" come from the space station, not from a real Moon base.</p>
 <h3>Software</h3>
-<p>Built with three.js and cannon-es (both MIT License). The videos and title art were drawn by our own scripts.</p>`;
+<p>Built with three.js and cannon-es (both MIT License).</p>
+<h3>SI disclosure</h3>
+<p>This game is <b>SI generated</b>: its code, data files, text, videos and title art were generated with Claude, an AI assistant, for the Farsight team. Videos and the title art carry a visible "SI GENERATED" watermark and an SI note in their file metadata. Every code and data file starts with an SI notice. Details: <code>SI_DISCLOSURE.md</code>. The game has no audio.</p>`;
 }
 const label = { o2PerCrew: 'Oxygen per person', waterPerCrew: 'Water per person', foodPerCrew: 'Food per person', o2GenMax: 'ISS oxygen generator, maximum', waterRecovery: 'ISS water recycling', issPower: 'ISS solar power', issOrbit: 'ISS orbit and time in shadow', radMoon: 'Radiation on the Moon', doseLimit: 'Career radiation limit', cabinTemp: 'Cabin temperature' };

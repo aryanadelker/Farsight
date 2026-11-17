@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 import { sourcesHTML } from './sourcesInfo.js';
 // Title screen, cinematics (intro / ending / credits) and the menus around them.
 // Videos are plain MP4 files in assets/video. If one cannot load, the game simply moves on.

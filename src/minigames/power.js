@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // MINIGAME 1: Power Distribution (also the Transmitter RF Chain variant).
 // Rotate bus links, close breakers, keep the locked-out line dead. Live open ends are short faults.
 import { s, C, DIRS, opp, rotM, has, BASE, shapeOf, armsPath, rint, pick, shuffle } from './kit.js';

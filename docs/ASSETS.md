@@ -1,3 +1,5 @@
+> SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md.
+
 # Farsight: base layout and assets
 
 Sizes and layout are invented (not NASA data). Module roles are inspired by the ISS.

@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // Procedural textures (no image files needed). Everything is drawn on <canvas>.
 import * as THREE from 'three';
 

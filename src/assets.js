@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // Shared materials + reusable 3D asset builders (ISS-inspired hardware, lunar-surface hardware).
 import * as THREE from 'three';
 import * as T from './textures.js';

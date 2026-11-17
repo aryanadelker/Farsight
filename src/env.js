@@ -1,3 +1,4 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 // Lunar surroundings: terrain, horizon, sky (stars, Earth, Sun) and surface hardware.
 // All layout numbers here are INVENTED design values (not NASA data).
 import * as THREE from 'three';

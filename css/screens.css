@@ -1,6 +1,7 @@
+/* SI generated: written with Claude (an AI assistant) for the Farsight team. See SI_DISCLOSURE.md. */
 /* Title screen and cinematics */
 #title{position:fixed;inset:0;z-index:60;display:none;flex-direction:column;justify-content:center;padding:0 7vw;
- background:linear-gradient(90deg,rgba(3,6,12,.94) 0%,rgba(3,6,12,.7) 38%,rgba(3,6,12,0) 62%),url(../assets/title_bg.jpg) center/cover #03060c;
+ background:linear-gradient(90deg,rgba(3,6,12,.94) 0%,rgba(3,6,12,.7) 38%,rgba(3,6,12,0) 62%),url(../assets/title_bg.jpg) right top/cover no-repeat #03060c;   /* pinned top-right so the SI GENERATED watermark is never cropped */
  font:500 16px/1.35 system-ui,"Segoe UI",Roboto,sans-serif;color:#dfe8f2}
 #title h1{margin:0;font:800 clamp(56px,9vw,124px)/1 system-ui,"Segoe UI",sans-serif;letter-spacing:.14em;color:#f0f4fa}
 #title .ts-sub{margin:10px 0 44px 4px;font-weight:300;letter-spacing:.32em;color:#96c8eb;font-size:clamp(13px,1.6vw,20px)}
